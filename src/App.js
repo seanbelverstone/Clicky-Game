@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Card from "./components/card";
 
 function App() {
   return (
@@ -35,6 +35,11 @@ function App() {
         </div>
       </div>
 
+      <div class="cardContainer">
+        <Card>
+          {}
+        </Card>
+      </div>
 
     {/* container closing tag */}
     </div>

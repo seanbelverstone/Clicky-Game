@@ -9,7 +9,6 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="logo192.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -25,15 +24,37 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-light bg-light">
+            <div class="col-4">
+              <a class="navbar-brand" href="#">Navbar</a>
+            </div>
+            <div class="col-4">
+              <p>Click an Image to Begin!</p>
+            </div>
+            <div class="col-1">
+              <p>Score: </p>
+            </div>
+            <div class="col-1">
+              <p>|</p>
+            </div>
+            <div class="col-2">
+              <p>Top Score: </p>
+            </div>
+          </nav>
+        </div>
+      </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Clicky Game</h1>
+          <p class="lead">Click on an image to earn points, but don't click on any more than once!</p>
+        </div>
+      </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+</div>
   </body>
 </html>

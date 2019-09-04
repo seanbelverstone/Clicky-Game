@@ -1,20 +1,28 @@
-import React from 'react';
-import './App.css';
+import React, {Component} from 'react';
+import Wrapper from "./components/wrapper";
 import Card from "./components/card";
-import cards from "./src/cards.json"
+import cards from "./cards.json";
 
-// class App extends Component {
-//   state = 
-//     card
-// }
+class App extends Component {
+  state = {
+    cards
+  }
 
 
-// function App() {
-//   return (
-//     <Card
-//       this.state
-      
-//   );
-// }
+render() {
+  return(
+    <Wrapper>
+      {/* This map goes through all of my json data so we can access each card individually */}
+      {this.state.cards.map(cards =>
+        <Card
+          key = {cards.id}
+          img = {cards.img}
+        />
+        )}
+    </Wrapper>
+    )
+  }
+}
 
 export default App;
+

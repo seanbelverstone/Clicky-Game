@@ -7,16 +7,14 @@ import Card from "./components/card";
 import cards from "./cards.json";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+
+    state = {
       cards,
       score: 0,
-      topScore: 0
+      topScore: 0,
+      clickedCards: []
     }
-    // this.score = this.score.bind(this);
-    // this.topScore = this.topScore.bind(this);
-  }
+
 
   incrementScore() {
     this.setState(state => ({
@@ -29,6 +27,16 @@ class App extends Component {
       topScore: state.topScore++
     }))
   }
+
+  checkClick(props) {
+    if (//Put in here an if statement asking if the id of the clicked deepjoy is already in the array, if not
+      //push to the array and run increment functions. If yes, then set score to 0, empty array and say you lost
+      console.log("yeee")) {
+
+    }
+  }
+  
+
 
 render() {
   return(
@@ -44,12 +52,6 @@ render() {
           id = {cards.id}
           url = {cards.url}
           clicked = {false}
-          onClick = {function() {
-            if (this.clicked = false) {
-              this.incrementScore();
-              this.incrementTopScore();
-            }
-          }}
         />
         )}
     </div>

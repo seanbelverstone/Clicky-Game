@@ -3,9 +3,13 @@ import "./style.css";
 
 function Card (props) {
     return(
-        <div className="card" key={props.id}>
+        <div className="card" key={props.id} id={props.id}>
             <div className="img-container">
-                <img alt={props.name} src={props.url}></img>
+                <img 
+                    alt={props.name} 
+                    src={props.url}
+                    onClick={() => alert("egg")}
+                    ></img>
             </div>
         </div>
     );

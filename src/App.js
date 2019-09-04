@@ -22,7 +22,9 @@ render() {
       {this.state.cards.map(cards =>
         <Card
           key = {cards.id}
+          id = {cards.id}
           url = {cards.url}
+          clicked = {false}
         />
         )}
     </div>

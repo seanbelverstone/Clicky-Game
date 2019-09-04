@@ -1,5 +1,5 @@
 img {
-    width: 300px;
+    width: 230px;
     height: auto;
     align-content: center;
     border: 4px gray solid;
@@ -8,7 +8,7 @@ img {
 }
 
 .card {
-    width: 302px;
+    width: 230px;
     height: auto;
     align-content: center;
     margin: 20px;

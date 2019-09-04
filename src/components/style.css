@@ -7,7 +7,15 @@ img {
 .card {
     width: 302px;
     height: auto;
-    float: left;
     align-content: center;
     margin: 20px;
+    display: inline-block;
+}
+
+img:hover {
+    z-index: 1;
+    box-shadow: darkgray -10px 10px 5px;
+    width: 303px;
+    transition: 0.2s ease;
+    cursor: pointer;
 }

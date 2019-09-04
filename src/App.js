@@ -15,7 +15,7 @@ render() {
   return(
     <Wrapper>
 
-    <Navbar />
+    <Navbar score = {0} topScore = {0}/>
     <Jumbotron />
     <div className="container">
       {/* This map goes through all of my json data so we can access each card individually */}

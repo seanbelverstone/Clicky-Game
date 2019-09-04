@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Navbar from "./navbar";
 
 function Card (props) {
     return(
@@ -8,7 +9,16 @@ function Card (props) {
                 <img 
                     alt={props.name} 
                     src={props.url}
-                    onClick={() => alert("egg")}
+
+                    onClick={() => {
+
+                        if (props.clicked === false) {
+                            alert("clicked");
+                            Navbar.score++;
+                            Navbar.topScore++;
+                        }
+
+                    }}
                     ></img>
             </div>
         </div>

@@ -16,7 +16,7 @@ render() {
       {this.state.cards.map(cards =>
         <Card
           key = {cards.id}
-          img = {cards.img}
+          url = {cards.url}
         />
         )}
     </Wrapper>

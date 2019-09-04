@@ -4,9 +4,11 @@ import "./style.css";
 function Card (props) {
     return(
         <div className="card" key={props.id}>
-            <img alt={props.name} src={props.url}></img>
+            <div className="img-container">
+                <img alt={props.name} src={props.url}></img>
+            </div>
         </div>
-    )
+    );
 }
 
 export default Card;

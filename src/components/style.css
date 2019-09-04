@@ -1,5 +1,13 @@
 img {
-    width: 70px;
+    width: 300px;
     height: auto;
     align-content: center;
+}
+
+.card {
+    width: 302px;
+    height: auto;
+    float: left;
+    align-content: center;
+    margin: 20px;
 }

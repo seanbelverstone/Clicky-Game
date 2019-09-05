@@ -1,10 +1,7 @@
 import React from "react";
 import "./style.css";
 
-let score = 0;
-let topScore = 0;
-
-function Navbar() {
+function Navbar({score, topScore}) {
     return(
         <div className="row">
             <div className="col-12">

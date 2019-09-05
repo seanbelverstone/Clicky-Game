@@ -32,16 +32,18 @@ class App extends Component {
   pushToArray(id) {
     // Function for pushing the selected cards to another array, to then allow us to check if they've been clicked
     // or not yet later on
-    const clickedCards = this.state.clickedCards.slice();
+    const clickedCards = this.state.clickedCards;
     clickedCards.push(id);
-    this.setState({clickedCards}, () => console.log(clickedCards)) //sets the old clickedCards array to be the new one
-  }                           //this console log is just to check. Can delete with the arrow function later
+    this.setState({clickedCards}, () => console.log(clickedCards)) 
+    //sets the old clickedCards array to be the new one
+    //this console log is just to check. Can delete with the arrow function later
 
+  }                           
 
   checkClick(id) {
 
     if (!this.state.clickedCards.includes(id)) {
-
+      console.log('yo');
       this.pushToArray(id);
       this.incrementScore();
       this.incrementTopScore();
@@ -58,7 +60,7 @@ render() {
   return(
     <Wrapper>
 
-    <Navbar score = {0} topScore = {0}/>
+    <Navbar score = {this.state.score} topScore = {this.state.topScore}/>
     <Jumbotron />
     <div className="container">
       {/* This map goes through all of my json data so we can access each card individually */}
@@ -68,7 +70,7 @@ render() {
           id = {cards.id}
           url = {cards.url}
           clicked = {false}
-          onClick = {this.checkClick}
+          onClick = {() => this.checkClick(cards.id)}
         />
         )}
     </div>

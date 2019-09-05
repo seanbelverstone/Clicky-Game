@@ -8,7 +8,7 @@ function Card (props) {
                 <img 
                     alt = {props.name} 
                     src = {props.url}
-                    onClick = {() => props.onClick(props.id)}
+                    onClick = {props.onClick}
                     ></img>
             </div>
         </div>

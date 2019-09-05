@@ -15,7 +15,8 @@ class App extends Component {
       cards,
       score: 0,
       topScore: 0,
-      clickedCards: []
+      clickedCards: [],
+      randomArray: []
     }
   this.checkClick = this.checkClick.bind(this) //binds the function to this, meaning the app
 
@@ -26,7 +27,9 @@ class App extends Component {
   }
 
   incrementTopScore() {
-    this.setState({topScore: this.state.topScore +1})
+    if (this.state.topScore <= this.state.score) {
+      this.setState({topScore: this.state.topScore +1})
+    }
   }
 
   pushToArray(id) {
@@ -38,19 +41,32 @@ class App extends Component {
     //sets the old clickedCards array to be the new one
     //this console log is just to check. Can delete with the arrow function later
 
-  }                           
+  }
+
+  randomizeArray() {
+
+    cards.sort(() => Math.random() - 0.5);
+    
+    this.setState({cards: this.state.cards});
+    //this sorts the array randomly and re-sets the state. I struggled with a long, complex solution
+    //for some time but after many hours this appeared to be the quickest, cleanest option. Apparently
+    //it's not 100% random, but that's ok.
+  }
 
   checkClick(id) {
 
     if (!this.state.clickedCards.includes(id)) {
-      console.log('yo');
+      let message = document.getElementById("message");
+      message.innerHTML = "You guessed correctly!";
+
       this.pushToArray(id);
       this.incrementScore();
       this.incrementTopScore();
-      //shuffle array and redisplay.
-      // will need to create a new array, which uses a random number generator to push random indexes over.
+      this.randomizeArray();
+      
     } else {
       console.log("you lose sucka");
+
     }
   }
   

@@ -7,7 +7,7 @@ function Navbar({score, topScore}) {
             <div className="col-12">
                 <nav className="navbar navbar-light bg-light">
                     <div className="col-3">
-                        <p>Click an Image to Begin!</p>
+                        <p id="message">Click an Image to Begin!</p>
                     </div>
                     <div className="col-2">
                         <p id="score">Score: {score}</p>

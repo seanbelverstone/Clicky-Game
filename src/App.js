@@ -16,8 +16,8 @@ class App extends Component {
       score: 0,
       topScore: 0,
       clickedCards: [],
-      randomArray: []
     }
+
   this.checkClick = this.checkClick.bind(this) //binds the function to this, meaning the app
 
   }
@@ -65,8 +65,12 @@ class App extends Component {
       this.randomizeArray();
       
     } else {
-      console.log("you lose sucka");
 
+      this.setState({score: 0});
+      this.setState({clickedCards: []});
+
+      let message = document.getElementById("message");
+      message.innerHTML = "You guessed incorrectly!";
     }
   }
   

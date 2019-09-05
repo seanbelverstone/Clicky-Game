@@ -10,6 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    //sets the states of cards, score, topscore and the clicked cards array
     this.state = {
       cards,
       score: 0,
@@ -29,22 +30,25 @@ class App extends Component {
   }
 
   pushToArray(id) {
+    // Function for pushing the selected cards to another array, to then allow us to check if they've been clicked
+    // or not yet later on
     const clickedCards = this.state.clickedCards.slice();
     clickedCards.push(id);
     this.setState({clickedCards}, () => console.log(clickedCards)) //sets the old clickedCards array to be the new one
-  }
+  }                           //this console log is just to check. Can delete with the arrow function later
 
 
   checkClick(id) {
 
     if (!this.state.clickedCards.includes(id)) {
 
-        this.pushToArray(id);
-
-
-    } else {
+      this.pushToArray(id);
       this.incrementScore();
       this.incrementTopScore();
+      //shuffle array and redisplay.
+      // will need to create a new array, which uses a random number generator to push random indexes over.
+    } else {
+      console.log("you lose sucka");
     }
   }
   

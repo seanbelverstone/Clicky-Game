@@ -6,9 +6,9 @@ function Card (props) {
         <div className="card" key={props.id} id={props.id}>
             <div className="img-container">
                 <img 
-                    alt={props.name} 
-                    src={props.url}
-        
+                    alt = {props.name} 
+                    src = {props.url}
+                    onClick = {() => props.onClick(props.id)}
                     ></img>
             </div>
         </div>

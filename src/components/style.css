@@ -26,3 +26,24 @@ img:hover {
 .wrapper {
     height: 100%;
 }
+
+
+#score, #divider, #topScore {
+    float: right;
+  }
+
+.navbar {
+    background-color: rgb(26,41,96) !important;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.jumbotron {
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 50px;
+}

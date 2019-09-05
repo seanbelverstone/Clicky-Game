@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+body {
+  background-image: url("https://content.halocdn.com/media/Default/community/blogs/3840_haloinfinite_e318_ring-96bf71d241184bfb8b1f1b0c3bb8a1a0.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

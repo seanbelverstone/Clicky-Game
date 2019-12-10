@@ -16,6 +16,7 @@ class App extends Component {
       score: 0,
       topScore: 0,
       clickedCards: [],
+      completionMessage: ""
     }
 
   this.checkClick = this.checkClick.bind(this) //binds the function to this, meaning the app
@@ -63,6 +64,7 @@ class App extends Component {
       this.incrementScore();
       this.incrementTopScore();
       this.randomizeArray();
+      this.checkWin();
       
     } else {
 
@@ -73,6 +75,15 @@ class App extends Component {
       message.innerHTML = "You guessed incorrectly!";
     }
   }
+
+  checkWin() {
+
+    if (this.state.clickedCards.length > 11) {
+      this.setState({completionMessage: "Well done, you're a winner!"})
+    } else {
+    this.setState({completionMessage: ""})
+  }
+}
   
 
 
@@ -82,6 +93,7 @@ render() {
 
     <Navbar score = {this.state.score} topScore = {this.state.topScore}/>
     <Jumbotron />
+    <p id="complete">{this.state.completionMessage}</p>
     <div className="container">
       {/* This map goes through all of my json data so we can access each card individually */}
       {this.state.cards.map(cards =>
